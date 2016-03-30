@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Worker {
-    public ArrayList<Tweet> collectionOfTweets = new ArrayList();
-    public ArrayList<State> collectionOfStates = new ArrayList();
-    public ArrayList<Sentiment> collectionOfSentiments = new ArrayList();
+class Worker {
+    private ArrayList<Tweet> collectionOfTweets = new ArrayList();
+    private ArrayList<State> collectionOfStates = new ArrayList();
+    private ArrayList<Sentiment> collectionOfSentiments = new ArrayList();
     Parser parserTweetsInterface = new ParseTweets();
     Parser parserStatesInterface = new ParseStates();
     Parser parserSentimentsInterface = new ParseSentiments();

@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyFileReader {
+class MyFileReader {
     List<String> lines;
 
     public void MyFileReader(String path) {

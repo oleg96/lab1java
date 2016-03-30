@@ -2,7 +2,7 @@ package lab1java;
 
 import java.util.Scanner;
 
-public class CommandInput {
+class CommandInput {
 
     String parsedStr[];
 

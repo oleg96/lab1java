@@ -21,17 +21,17 @@ public class lab1java {
                         throw new ArrayIndexOutOfBoundsException();
                     }
                     else {
-                        if (inputLine.returnParsedStr()[0].toString().equals("all_tweets.txt"))
+                        if (inputLine.returnParsedStr()[0].toString().contains("all_tweets.txt"))
                         {
                             outLines.searchTweets(fileReader.returnLines(), Integer.parseInt(inputLine.returnParsedStr()[1]), Integer.parseInt(inputLine.returnParsedStr()[2]));
                             outLines.writeTweetsToConsole();
                         }
-                        if (inputLine.returnParsedStr()[0].toString().equals("states.json"))
+                        if (inputLine.returnParsedStr()[0].toString().contains("states.json"))
                         {
                             outLines.SearchStates(fileReader.returnLines());
                             outLines.writeStatesToConsole();
                         }
-                        if (inputLine.returnParsedStr()[0].toString().equals("sentiments.csv"))
+                        if (inputLine.returnParsedStr()[0].toString().contains("sentiments.csv"))
                         {
                             outLines.searchSentiments(fileReader.returnLines());
                             outLines.writeSentimentsToConsole();

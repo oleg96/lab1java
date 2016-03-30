@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ParseTweets implements Parser {
+class ParseTweets implements Parser {
 
     public Tweet parserTweets(String str) {
         Tweet tweet;

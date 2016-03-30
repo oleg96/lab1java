@@ -5,7 +5,7 @@ import java.util.List;
 
 import lab1java.State.CollectionOfCoordinates;
 
-public class State {
+class State {
     private String name;
     static class CollectionOfCoordinates {
         private Point2D.Double point;

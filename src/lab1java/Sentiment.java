@@ -1,6 +1,6 @@
 package lab1java;
 
-public class Sentiment {
+class Sentiment {
     private String name;
     private double value;
     public Sentiment(String name, double value) {
