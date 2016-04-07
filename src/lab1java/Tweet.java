@@ -2,7 +2,7 @@ package lab1java;
 
 import java.util.Date;
 
-class Tweet {
+public class Tweet {
     private double latitude;
     private double longitude;
     private Date date;

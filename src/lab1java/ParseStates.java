@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class ParseStates implements Parser {
+class ParseStates implements ParserS<State, String, String> {
 
-    public State parserStates(String str, String name) {
+    public State parser(String str, String name) {
         JsonObject jsonObject = new JsonParser().parse(str).getAsJsonObject();
 
         JsonArray array = new JsonArray();
@@ -45,11 +45,5 @@ class ParseStates implements Parser {
         }
         State state = new State(name, listOfCollections);
         return state;
-    }
-    public Tweet parserTweets(String str){
-        return null;
-    }
-    public Sentiment parserSentiments(String str) {
-        return null;
     }
 }

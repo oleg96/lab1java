@@ -5,16 +5,16 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class Worker {
+public class Worker {
     private ArrayList<Tweet> collectionOfTweets = new ArrayList();
     private ArrayList<State> collectionOfStates = new ArrayList();
     private ArrayList<Sentiment> collectionOfSentiments = new ArrayList();
-    Parser parserTweetsInterface = new ParseTweets();
-    Parser parserStatesInterface = new ParseStates();
-    Parser parserSentimentsInterface = new ParseSentiments();
+    Parser parserInterfaceTweets = new ParseTweets();
+    Parser parserInterfaceSentiments = new ParseSentiments();
+    ParserS parserInterfaceStates = new ParseStates();
     public void searchTweets(List<String> lines, int position, int count) {
         for(int i = position-1; i < position-1 + count; i++) {
-            collectionOfTweets.add(parserTweetsInterface.parserTweets(lines.get(i)));
+            collectionOfTweets.add((Tweet)parserInterfaceTweets.parser(lines.get(i)));
         }
     }
     public void writeTweetsToConsole() {
@@ -23,7 +23,7 @@ class Worker {
             System.out.println(collectionOfTweets.get(i).toString());
         }
     }
-    public void SearchStates(List<String> str) {
+    public void searchStates(List<String> str) {
         String pattern = "[A-Z][A-Z]";
         List<String> arrayOfStateNames = new ArrayList<String>();
         Pattern p = Pattern.compile(pattern);
@@ -33,7 +33,7 @@ class Worker {
         }
         for(int i = 0; i < arrayOfStateNames.size(); i++)
         {
-            collectionOfStates.add(parserStatesInterface.parserStates(str.get(0), arrayOfStateNames.get(i)));
+            collectionOfStates.add((State)parserInterfaceStates.parser(str.get(0), arrayOfStateNames.get(i)));
         }
     }
     public void writeStatesToConsole() {
@@ -45,7 +45,7 @@ class Worker {
     public void searchSentiments(List<String> str) {
         for (int i = 0; i < str.size(); i++)
         {
-            collectionOfSentiments.add(parserSentimentsInterface.parserSentiments(str.get(i)));
+            collectionOfSentiments.add((Sentiment)parserInterfaceSentiments.parser(str.get(i)));
         }
     }
     public void writeSentimentsToConsole() {

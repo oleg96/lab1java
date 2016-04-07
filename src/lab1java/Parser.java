@@ -1,7 +1,5 @@
 package lab1java;
 
-interface Parser {
-    Tweet parserTweets(String str);
-    State parserStates(String str, String name);
-    Sentiment parserSentiments(String str);
+public interface Parser<T1, T2> {
+    T1 parser(T2 line);
 }

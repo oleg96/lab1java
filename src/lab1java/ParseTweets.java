@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class ParseTweets implements Parser {
+public class ParseTweets implements Parser<Tweet, String> {
 
-    public Tweet parserTweets(String str) {
+    public Tweet parser(String str) {
         Tweet tweet;
         String pattern = "(\\d+\\.\\d+)|(-\\d+\\.\\d+)|(\\d\\d+.\\d+.\\d+)";
         List<String> arrayOfStrings = new ArrayList<String>();
@@ -33,11 +33,5 @@ class ParseTweets implements Parser {
         str = str.replaceAll("[\\s]{2,}", " ");
         tweet = new Tweet(Double.parseDouble(arrayOfStrings.get(0)), Double.parseDouble(arrayOfStrings.get(1)), result, str);
         return tweet;
-    }
-    public State parserStates(String str, String name){
-        return null;
-    }
-    public Sentiment parserSentiments(String str) {
-        return null;
     }
 }

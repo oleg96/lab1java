@@ -10,7 +10,7 @@ public class lab1java {
                 throw new IllegalArgumentException("Some parameter was missed! Please try again");
             }
             else {
-                fileReader.MyFileReader(inputLine.returnParsedStr()[0].toString());
+                fileReader.fileReader(inputLine.returnParsedStr()[0].toString());
                 try {
                     if(fileReader.returnLines().size() == 0)
                     {
@@ -28,7 +28,7 @@ public class lab1java {
                         }
                         if (inputLine.returnParsedStr()[0].toString().contains("states.json"))
                         {
-                            outLines.SearchStates(fileReader.returnLines());
+                            outLines.searchStates(fileReader.returnLines());
                             outLines.writeStatesToConsole();
                         }
                         if (inputLine.returnParsedStr()[0].toString().contains("sentiments.csv"))

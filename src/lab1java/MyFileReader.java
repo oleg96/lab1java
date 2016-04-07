@@ -5,10 +5,10 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
-class MyFileReader {
+public class MyFileReader {
     List<String> lines;
 
-    public void MyFileReader(String path) {
+    public void fileReader(String path) {
         try {
             lines = new ArrayList<String>();
             BufferedReader reader = new BufferedReader(new FileReader(path));

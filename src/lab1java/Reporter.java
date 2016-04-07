@@ -1,7 +1,7 @@
 package lab1java;
 
 interface Reporter<T> {
-    public void TweetTag(T t);
-    public void TweetCost(T t);
-    public void StateTweetCount(T t);
+    void tweetTag(T t);
+    void tweetCost(T t);
+    void stateTweetCount(T t);
 }
