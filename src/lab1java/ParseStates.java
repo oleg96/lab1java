@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class ParseStates implements ParserS<State, String, String> {
+public class ParseStates implements ParserS<State, String, String> {
 
     public State parser(String str, String name) {
         JsonObject jsonObject = new JsonParser().parse(str).getAsJsonObject();
