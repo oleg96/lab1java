@@ -17,6 +17,9 @@ public class State {
         {
             return point.toString();
         }
+        public Point2D.Double getPoint() {
+            return point;
+        }
     }
     private List<List<CollectionOfCoordinates>> listOfcollection;
     public State(String name, List<List<CollectionOfCoordinates>> listOfcollection) {
@@ -28,4 +31,8 @@ public class State {
     {
         return name+" "+listOfcollection.toString();
     }
+    public List<List<CollectionOfCoordinates>> getCollection() {
+        return listOfcollection;
+    }
+    public String getName() { return name; }
 }

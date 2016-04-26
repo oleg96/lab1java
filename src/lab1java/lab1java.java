@@ -1,5 +1,7 @@
 package lab1java;
 
+import java.awt.*;
+
 public class lab1java {
 
     public static void start(MyFileReader fileReader, CommandInput inputLine, Worker outLines) {
@@ -25,6 +27,7 @@ public class lab1java {
                         {
                             outLines.searchTweets(fileReader.returnLines(), Integer.parseInt(inputLine.returnParsedStr()[1]), Integer.parseInt(inputLine.returnParsedStr()[2]));
                             outLines.writeTweetsToConsole();
+                            //outLines.searchTweetTag();
                         }
                         if (inputLine.returnParsedStr()[0].toString().contains("states.json"))
                         {

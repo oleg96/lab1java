@@ -11,4 +11,10 @@ public class Sentiment {
     public String toString() {
         return "Name: "+name+" | Value: "+value;
     }
+    public String getName() {
+        return name;
+    }
+    public double getValue() {
+        return value;
+    }
 }
