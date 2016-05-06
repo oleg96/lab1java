@@ -122,8 +122,8 @@ public class Worker {
         searchStates(statesLoader.returnLines());
         //System.out.println("Enter start date:");
         //Scanner inDate = new Scanner(System.in);
-        String date1 = "2011-08-28 19:00:00";
-        String date2 = "2011-08-28 19:10:00";
+        String date1 = "2011-01-01 19:00:00";
+        String date2 = "2012-08-28 19:10:00";
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd H:m:s");
         Date start = null;
         Calendar startCalendar;

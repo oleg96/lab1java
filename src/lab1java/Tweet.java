@@ -2,8 +2,17 @@ package lab1java;
 
 import java.util.Calendar;
 import java.util.Date;
-
+/**
+ * Define class which contains information about tweet
+ * @see Double
+ * @see Date
+ * @see String
+ * @author Oleg Fedorov
+ */
 public class Tweet {
+    /**
+     * Class constructor
+     */
     private double latitude;
     private double longitude;
     private Date date;

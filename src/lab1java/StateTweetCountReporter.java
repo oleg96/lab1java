@@ -8,9 +8,27 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Define name of state with the largest number of tweets
+ * @see String
+ * @see Tweet
+ * @see java.util.Date
+ * @see java.util.Date
+ * @author Oleg Fedorov
+ */
+
 public class StateTweetCountReporter implements Reporter<String, InputParameters> {
     List<Point2D.Double> listOfCoord;
     Map<String, Integer> PopularState = new HashMap<String, Integer>();
+    /**
+     * Define name of state with the largest number of tweets
+     * @see String
+     * @see Tweet
+     * @see java.util.Date
+     * @see java.util.Date
+     * @param parameters input parameters for reporter
+     * @return name of state with the largest number of tweets
+     */
     public String reporter(InputParameters parameters) {
         for (int i = 0; i < parameters.collectionOfStates.size(); i++) {
             int countOfTweets = 0;
@@ -39,15 +57,23 @@ public class StateTweetCountReporter implements Reporter<String, InputParameters
                 maxEntry=temp;
             }
         }
+        for (Map.Entry<String, Integer> e : PopularState.entrySet()) {
+            System.out.println(e.getKey()+" "+e.getValue());
+        }
+        //System.out.println();
         return maxEntry.getKey();
     }
-
+    /**
+     * Build state with help of Path2D by it coordinates
+     * @see java.util.List<Path2D>
+     * @return Path2D object
+     */
     public Path2D pathBuilder() {
         Path2D path = new Path2D.Double();
         boolean isFirst = true;
         for (int i = 0; i < listOfCoord.size(); i++) {
             double x = listOfCoord.get(i).getX() * 1000000;
-            double y = listOfCoord.get(i).getX() * 1000000;
+            double y = listOfCoord.get(i).getY() * 1000000;
             if (isFirst) {
                 path.moveTo(x, y);
                 isFirst = false;

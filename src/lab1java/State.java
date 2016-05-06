@@ -4,8 +4,16 @@ import java.awt.geom.Point2D;
 import java.util.List;
 
 import lab1java.State.CollectionOfCoordinates;
-
+/**
+ * Define class which contains information about state
+ * @see String
+ * @see State
+ * @author Oleg Fedorov
+ */
 public class State {
+    /**
+     * Class constructor
+     */
     private String name;
     static class CollectionOfCoordinates {
         private Point2D.Double point;
